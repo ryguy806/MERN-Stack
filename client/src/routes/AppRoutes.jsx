@@ -1,12 +1,13 @@
-const { Routes, Route } = "react-router-dom";
-import Home from "../pages/Home";
-import Layout from "components/Layout";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Dashboard from "../pages/Dashboard";
+import Layout from "../components/Layout";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route index element={<Home />} />
+      <Route element={<Layout />}>
+        <Route path='/' element={<Navigate to='/dashboard' replace />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       </Route>
     </Routes>
   );

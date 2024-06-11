@@ -1,10 +1,10 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { useSelector } from "react-redux";
-import { themeSettings } from "themes";
+import { themeSettings } from "./themes";
 import { useMemo } from "react";
 import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "routes/AppRoutes";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
