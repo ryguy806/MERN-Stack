@@ -27,3 +27,14 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
+
+/* MONGOOSE DB CONFIGURATION */
+const PORT = process.env.PORT || 9000;
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch((err) => console.log(err, "Did not connect to server"));
