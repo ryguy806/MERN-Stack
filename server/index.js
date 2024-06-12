@@ -34,6 +34,7 @@ app.use("/sales", salesRoutes);
 
 /* MONGOOSE DB CONFIGURATION */
 const PORT = process.env.PORT || 9000;
+
 mongoose
   .connect(process.env.MONGO_DB_URL)
   .then(() => {
