@@ -9,10 +9,12 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { api } from "./state/api";
 
 const store = configureStore({
-  reducer: { global: globalReducer, [api.reducerPath]: api.reducerPath },
+  reducer: {
+    global: globalReducer,
+    [api.reducerPath]: api.reducer,
+  },
   middleware: (getDefault) => getDefault().concat(api.middleware),
 });
-
 setupListeners(store.dispatch);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
