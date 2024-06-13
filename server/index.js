@@ -18,6 +18,8 @@ import salesRoutes from "./routes/sales.js";
 // import { dataProduct } from "./data/index.js";
 // import ProductStat from "./models/ProductStats.js";
 // import { dataProductStat } from "./data/index.js";
+// import Transaction from "./models/Transaction.js";
+// import { dataTransaction } from "./data/index.js";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -48,5 +50,6 @@ mongoose
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
   })
   .catch((err) => console.log(err, "Did not connect to server"));
