@@ -130,6 +130,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       pointBorderColor={{ from: "serieColor" }}
       pointLabelYOffset={-12}
       useMesh={true}
+      animate
       legends={
         !isDashboard
           ? [
