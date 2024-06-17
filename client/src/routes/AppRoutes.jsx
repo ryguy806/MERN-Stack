@@ -6,6 +6,7 @@ import Customers from "../pages/Customers";
 import Transactions from "../pages/Transactions";
 import Geography from "../pages/Geography";
 import Overview from "../pages/Overview";
+import Daily from "../pages/Daily";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         <Route path='/transactions' element={<Transactions />} />
         <Route path='/geography' element={<Geography />} />
         <Route path='/overview' element={<Overview />} />
+        <Route path='/daily' element={<Daily />} />
       </Route>
     </Routes>
   );

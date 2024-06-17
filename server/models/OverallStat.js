@@ -6,8 +6,8 @@ const OverallStatSchema = new mongoose.Schema(
     yearlySalesTotal: Number,
     yearlyTotalSoldUnits: Number,
     year: Number,
-    monthlyData: [{ month: String, totalUnits: Number, TotalSales: Number }],
-    dailyData: [{ daily: String, totalUnits: Number, TotalSales: Number }],
+    monthlyData: [{ month: String, totalUnits: Number, totalSales: Number }],
+    dailyData: [{ date: String, totalUnits: Number, totalSales: Number }],
     salesByCategory: { type: Map, of: Number },
   },
   { timestamps: true }

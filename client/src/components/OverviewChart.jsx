@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { useGetSalesQuery } from "../state/api";
-import { string, bool } from "prop-types";
+import { bool, string } from "prop-types";
 
 const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme();
@@ -130,7 +130,6 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       pointBorderColor={{ from: "serieColor" }}
       pointLabelYOffset={-12}
       useMesh={true}
-      animate
       legends={
         !isDashboard
           ? [
