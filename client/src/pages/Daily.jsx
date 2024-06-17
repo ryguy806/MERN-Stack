@@ -151,7 +151,6 @@ const Daily = () => {
             pointBorderWidth={2}
             pointBorderColor={{ from: "serieColor" }}
             pointLabelYOffset={-12}
-            isInteractive={false}
             useMesh={true}
             legends={[
               {
