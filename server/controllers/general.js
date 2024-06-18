@@ -13,11 +13,12 @@ export const getUser = async (req, res) => {
 };
 
 export const getDashboardStats = async (req, res) => {
+  const date = new Date();
   try {
     // hardcoded values
     const currentMonth = "June";
     const currentYear = 2021;
-    const currentDay = "2021-06-15";
+    const currentDay = "2021-06-18";
 
     /* Recent Transactions */
     const transactions = await Transaction.find()
