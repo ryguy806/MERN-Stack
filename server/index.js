@@ -20,8 +20,8 @@ import salesRoutes from "./routes/sales.js";
 // import { dataProductStat } from "./data/index.js";
 // import Transaction from "./models/Transaction.js";
 // import { dataTransaction } from "./data/index.js";
-import OverallStat from "./models/OverallStat.js";
-import { dataOverallStat } from "./data/index.js";
+// import OverallStat from "./models/OverallStat.js";
+// import { dataOverallStat } from "./data/index.js";
 
 /* CONFIGURATIONS */
 dotenv.config();
@@ -53,6 +53,6 @@ mongoose
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
-    OverallStat.insertMany(dataOverallStat);
+    // OverallStat.insertMany(dataOverallStat);
   })
   .catch((err) => console.log(err, "Did not connect to server"));
