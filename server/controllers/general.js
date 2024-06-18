@@ -1,4 +1,6 @@
 import User from "../models/User.js";
+import Transaction from "../models/Transaction.js";
+import OverallStat from "../models/OverallStat.js";
 
 export const getUser = async (req, res) => {
   try {
@@ -13,9 +15,9 @@ export const getUser = async (req, res) => {
 export const getDashboardStats = async (req, res) => {
   try {
     // hardcoded values
-    const currentMonth = new Date().getMonth();
+    const currentMonth = "June";
     const currentYear = 2021;
-    const currentDay = new Date().getDate();
+    const currentDay = "2021-06-15";
 
     /* Recent Transactions */
     const transactions = await Transaction.find()
